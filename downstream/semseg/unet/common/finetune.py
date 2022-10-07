@@ -49,9 +49,11 @@ class Finetune():
     self.is_master = is_master_proc(config.distributed.num_gpus)
     # put logger where it belongs
     if self.is_master:
-      logging.info(config.pretty())
-      wandb.init(project="pri3d", name=config.train.exp_name, config=config, reinit=True)
-    
+      #logging.info(config.pretty())
+      logging.info(config)
+      #wandb.init(project="pri3d", name=config.train.exp_name, config=config, reinit=True)
+      wandb.init(project="pri3d", entity="at3dcv_sose22", name=config.train.exp_name, config=config, reinit=True)
+
     self.init_dataset()
     self.init_model()
     self.init_optimizer()

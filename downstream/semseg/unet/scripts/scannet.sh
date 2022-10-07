@@ -1,5 +1,5 @@
 #!/bin/bash
-python main.py \
+CUDA_VISIBLE_DEVICES=7 python3 main.py \
     train.batch_size=8 \
     train.phase=$PHASE \
     train.workers=4 \
@@ -22,3 +22,4 @@ python main.py \
     finetune.model=Semantic2D \
     finetune.pretrain=$INIT \
     finetune.backbone=$BACKBONE \
+    

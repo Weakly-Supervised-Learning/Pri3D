@@ -1,5 +1,5 @@
 pymp-pypi
-git+git://github.com/waspinator/pycococreator.git@0.2.0
+#git+git://github.com/waspinator/pycococreator.git@0.2.0
 ipdb~=0.13.3
 yacs~=0.1.8
 h5py~=2.10.0

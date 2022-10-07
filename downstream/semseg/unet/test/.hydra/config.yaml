@@ -1,0 +1,47 @@
+train:
+  phase: train
+  is_train: true
+  exp_name: test
+  log_dir: test
+  batch_size: 8
+  report_batch: 10
+  report_epoch: 5
+  workers: 2
+  write_result: false
+optimizer:
+  optimizer: Adam
+  lr: 0.001
+  sgd_momentum: 0.9
+  sgd_dampening: 0.1
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  weight_decay: 0.0
+  bn_momentum: 0.02
+scheduler:
+  scheduler: MultiStepLR
+  max_epochs: 180
+  decay_epochs:
+  - 80
+  - 120
+  - 160
+  lr_decay: 0.1
+  step_size: 80
+  poly_power: 0.9
+distributed:
+  num_gpus: 1
+finetune:
+  model: null
+  pretrain: null
+  backbone: null
+dataset:
+  name: ScanNetDataset
+  path: /rhome/jhou/data/dataset/scannet/rgbd/
+  size:
+  - 240
+  - 320
+  augment: false
+  chunk: false
+  npoints: 80000
+  resize: true
+  colorjitter: false
+  random_crop: false
