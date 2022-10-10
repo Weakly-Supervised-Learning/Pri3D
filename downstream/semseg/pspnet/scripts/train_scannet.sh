@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CUDA_VISIBLE_DEVICES=7 python main.py \
+CUDA_VISIBLE_DEVICES=7 python3 main.py \
     train.log_dir=$LOG_DIR \
     train.exp_name=PSPNet_SEMSEG \
     train.weight=$INIT \
