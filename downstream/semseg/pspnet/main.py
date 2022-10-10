@@ -50,7 +50,8 @@ def main(config):
     logging.info("=> creating model ...")
     logging.info("Classes: {}".format(config.dataset.classes))
     logging.info(model)
-    wandb.init(project="pri3d", name=config.train.exp_name, config=config, reinit=True)
+    #wandb.init(project="pri3d", name=config.train.exp_name, config=config, reinit=True)
+    wandb.init(project="pri3d", entity="at3dcv_sose22", name=config.train.exp_name, config=config, reinit=True)
 
     model = torch.nn.DataParallel(model.cuda())
 
