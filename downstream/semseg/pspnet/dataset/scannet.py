@@ -12,7 +12,10 @@ class ScanNet(Dataset):
         filelist = {
                 'train': 'scannetv2_train.txt',
                 'val': 'scannetv2_val.txt'}
-        filelist = open(os.path.join(data_root, 'splits', filelist[split])).readlines()
+        #filelist = open(os.path.join(data_root, 'splits', filelist[split])).readlines()
+        filelist = open(os.path.join(
+            '/home/lennart-at/Pri3D_fork/Pri3D/downstream/semseg/unet/dataset/scannet_split', 
+            filelist[split])).readlines()
         filelist = [sceneid.strip() for sceneid in filelist]
 
         self.data_list = []
