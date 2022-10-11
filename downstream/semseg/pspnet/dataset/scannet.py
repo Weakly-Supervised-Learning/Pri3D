@@ -14,7 +14,7 @@ class ScanNet(Dataset):
                 'val': 'scannetv2_val.txt'}
         #filelist = open(os.path.join(data_root, 'splits', filelist[split])).readlines()
         filelist = open(os.path.join(
-            '/home/lennart-at/Pri3D_fork/Pri3D/downstream/semseg/unet/dataset/scannet_split', 
+            '/home/lennart-at/Pri3D_fork/Pri3D/downstream/semseg/unet/dataset/scannet_splits', 
             filelist[split])).readlines()
         filelist = [sceneid.strip() for sceneid in filelist]
 
